@@ -1,6 +1,4 @@
-<img align="right" src="https://github.com/ada-school/module-template/blob/main/ada.png">
-
-### Part 1: Implementing the Users Microservice RESTFUL API
+## Part 1: Implementing the Users Microservice RESTFUL API 💻
 
 1. Create a new project using the [Spring Initializr](https://start.spring.io/)
   * Use either *Java* or *Kotlin* as programming language.
