@@ -1,21 +1,26 @@
 package edu.eci.users.data;
 
-import java.util.Date;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.time.LocalDate;
 
 public class User {
 
-    private AtomicInteger id;
+    private String id;
     private String name;
     private String email;
     private String lastName;
-    private Date createdAt;
+    private LocalDate createdAt;
 
-    public AtomicInteger getId() {
+    public User(String name, String email, String lastName) {
+        this.name = name;
+        this.email = email;
+        this.lastName = lastName;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(AtomicInteger id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -43,19 +48,22 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Date getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
 
     @Override
     public String toString() {
-        return "User [createdAt=" + createdAt + ", email=" + email + ", id=" + id + ", lastName=" + lastName + ", name="
-                + name + "]";
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", createdAt=" + createdAt +
+                '}';
     }
-    
-    
 }
